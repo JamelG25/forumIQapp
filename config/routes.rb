@@ -7,15 +7,7 @@ Rails.application.routes.draw do
 
   get 'forums/edit'
 
-  get 'forums_controller/index'
 
-  get 'forums_controller/show'
-
-  get 'forums_controller/new'
-
-  get 'forums_controller/create'
-
-  get 'forums_controller/edit'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
