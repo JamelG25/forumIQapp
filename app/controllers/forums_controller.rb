@@ -10,4 +10,5 @@ class ForumsController < ApplicationController
 
   def edit
   end
+
 end
