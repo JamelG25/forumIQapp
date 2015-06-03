@@ -1,17 +1,24 @@
 Rails.application.routes.draw do
 
 
+
+
     root 'pages#home'
-
     get "/about" => "about#index",as: :about
-
     get '/profile' => "profiles#index",as: :profile
-
     get '/contact' => "contacts#index",as: :contact
-
     get '/review' => "reviews#index",as: :review
 
 
+    get 'users/index' =>'users#index',as: :users
+    get 'users/new' => 'users#new',as: :new_user
+    post "/" => 'users#create', as: :create_user
+
+
+
+    get 'users/session' => 'sessions#new',as: :new_session
+    post 'sessions/create' => 'sessions#create',as: :create_session
+    get 'sessions/destroy' => 'sessions#destroy',as: :destroy_session
 
 
 
