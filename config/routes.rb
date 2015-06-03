@@ -1,11 +1,20 @@
 Rails.application.routes.draw do
-  get 'forums/index'
 
-  get 'forums/new'
 
-  get 'forums/show'
+    root 'pages#home'
 
-  get 'forums/edit'
+    get "/about" => "about#index",as: :about
+
+    get '/profile' => "profiles#index",as: :profile
+
+    get '/contact' => "contacts#index",as: :contact
+
+    get '/review' => "reviews#index",as: :review
+
+
+
+
+
 
 
 

@@ -7,6 +7,10 @@ gem 'rails', '4.2.0'
 gem 'pg'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
+#carrierwave
+gem 'carrierwave'
+#image resposive
+gem 'responsive_images'
 #bootstrap
 gem 'bootstrap-sass', '~> 3.1.0'
 # Use Uglifier as compressor for JavaScript assets
