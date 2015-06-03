@@ -4,9 +4,8 @@
     <div class="<%= key %>"> <%= value %>  </div>
 <% end %>
 
-<%= link_to "Register", new_user_path %>
-
 <% if current_user %>
+<%= link_to "Register", new_user_path %>
     <%= link_to "CREATE AN ACCOUNT", destroy_session_path %>
 <% else %>
     <%= link_to "LOG IN", new_session_path %>

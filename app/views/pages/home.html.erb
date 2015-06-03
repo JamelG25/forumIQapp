@@ -10,11 +10,19 @@
         </div>
 
         <div class="col-sm-4">
-          <div style="background:red">know</div>
-          <p>While I doubt you’ll get much sympathy from McJester, who has likely seen every bad beat possible, it did get me
-            thinking. What are the worst ways to get bad beat in DFS? In a Letterman-homage, here’s what I came up with.</p>
+          <div style="background:red">Guess</div>
+          <% if current_user %>
+              <%= link_to "LOG OUT",destroy_session_path, class:"btn btn-default" %>
+          <%else%>
+              <p>While I doubt you’ll get much sympathy from McJester, who has likely seen every bad beat possible, it did get me
+                thinking. What are the worst ways to get bad beat in DFS? In a Letterman-homage, here’s what I came up with.</p>
           <%= link_to "LOG IN",new_session_path, class:"btn btn-default" %>
+
+          <% end%>
+          <% unless current_user %>
           <%= link_to "CREATE AN ACCOUNT", new_user_path, class:"btn btn-default" %>
+          <% end%>
+
 
           <div style="background:red">know</div>
           <p>While I doubt you’ll get much sympathy from McJester, who has likely seen every bad beat possible, it did get me

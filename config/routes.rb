@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 
 
     root 'pages#home'
+
+    get '/pages' => 'pages#home',as: :pages
+
     get "/about" => "about#index",as: :about
     get '/profile' => "profiles#index",as: :profile
     get '/contact' => "contacts#index",as: :contact
