@@ -59,4 +59,9 @@ group :development do
 
 end
 
+
+gem "sucker_punch"
+gem 'ransack', github: 'activerecord-hackery/ransack', branch: 'rails-4.2'
 gem 'local_time', '~> 1.0.0'
+
+gem 'html-pipeline'
