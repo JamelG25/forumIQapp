@@ -13,4 +13,6 @@ class User < ActiveRecord::Base
   has_secure_password
 
   has_many :forum_threads
+  has_many :forum_posts
+
 end

@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class AboutControllerTest < ActionController::TestCase
+class ForumPostsControllerTest < ActionController::TestCase
   test "should get forum" do
     get :forum
     assert_response :success

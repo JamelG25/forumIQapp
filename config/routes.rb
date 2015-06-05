@@ -1,16 +1,25 @@
 Rails.application.routes.draw do
 
+  # get 'pages/home'
+
+  # get 'forum_posts/forum'
+  #
+  # get 'forum_threads/new' => "forum#new",as: :new_forum_thread
+
+  resources :forum_threads do
+    resources :forum_posts, module: :forum_threads
+  end
 
 
 
     root 'pages#home'
 
-    get '/pages' => 'pages#home',as: :pages
+    get '/pages' => 'pages#home',as: :home
 
     get "/about" => "about#index",as: :about
-    get '/profile' => "profiles#index",as: :profile
-    get '/contact' => "contacts#index",as: :contact
-    get '/review' => "reviews#index",as: :review
+    get '/profile' => "profiles#forum",as: :profile
+    get '/contact' => "contacts#forum",as: :contact
+    get '/review' => "reviews#forum",as: :review
 
 
     get 'users/index' =>'users#index',as: :users
@@ -32,7 +41,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  # root 'welcome#forum'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
