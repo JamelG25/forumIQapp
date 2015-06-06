@@ -12,10 +12,6 @@
 #
 #  index_forum_threads_on_user_id  (user_id)
 #
-# Foreign Keys
-#
-#  fk_rails_f47941e2e4  (user_id => users.id)
-#
 
 require 'test_helper'
 

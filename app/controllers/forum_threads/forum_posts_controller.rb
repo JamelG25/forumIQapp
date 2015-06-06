@@ -15,9 +15,9 @@ class ForumThreads::ForumPostsController < ApplicationController
 
     if @forum_thread.save
       # @forum_post.send_notifications!
-      redirect_to forum_threads_path(@forum_thread, anchor: "forum_post_#{@forum_post.id}"), notice: "Successfully posted!"
+      redirect_to forum_thread_path(@forum_thread, anchor: "forum_post_#{@forum_post.id}"), notice: "Successfully posted!"
     else
-      redirect_to @forum_thread, alert: "Unable to save your post"
+      redirect_to forum_threads_path, alert: "Unable to save your post"
     end
   end
 
