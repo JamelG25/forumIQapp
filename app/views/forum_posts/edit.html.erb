@@ -1,0 +1,11 @@
+<h1>Edit your post</h1>
+
+<%= form_for ForumPost.new, url: edit_forum_post_path do |f| %>
+
+    <div class="form-group">
+      <%= f.text_area :body, class: "form-control" %>
+    </div>
+
+    <%= f.submit "Submit", class: "btn btn-warning" %>
+
+<% end %>

@@ -6,13 +6,34 @@ Rails.application.routes.draw do
   #
   # get 'forum_threads/new' => "forum#new",as: :new_forum_thread
 
+
+  get 'forum_threads/:id', to: 'forum_threads#show',as: :forum_thread
+  get 'forum_threads' => "forum_threads#index",as: :forum_threads
+  post'/forum_posts', to: 'forumthreads#create', as: :create_forum_post
+
+
+
+
+
+  get "forum_posts/:id/edit" => "forum_threads#edit",as: :edit_forum_post
+  patch "forum_posts/:id/edit" => "forum_threads/forum_posts#update",as: :update_forum_posts
+  put "forum_posts/:id/edit" => "forum_threads/forum_posts#update",as: :update_forum_post
+  delete 'forum_posts/:id' =>'forum_threads/forum_posts#destroy',as: :destroy
+
+
+
+  delete 'forum_threads/:id' =>'forum_threads#destroy',as: :destroy_thread
+
+
+
+
   resources :forum_threads do
     resources :forum_posts, module: :forum_threads
   end
 
 
 
-    root 'pages#home'
+  root 'pages#home'
 
     get '/pages' => 'pages#home',as: :home
 

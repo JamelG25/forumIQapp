@@ -27,6 +27,27 @@ class ForumThreadsController < ApplicationController
     end
   end
 
+  def edit
+    @forum_threads = ForumThread.find(params[:id])
+  end
+
+  def update
+    params[:forum_thread]
+    forum_post = ForumThread.find(params[:id])
+    if forum_post.update_attributes(params.require(:forum_thread).permit(:subject))
+      redirect_to forum_threads_path
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @forum_thread = ForumThread.find(params[:id])
+    @forum_thread.destroy
+    redirect_to forum_threads_path
+  end
+
+
   private
 
   def set_forum_thread
@@ -36,4 +57,26 @@ class ForumThreadsController < ApplicationController
   def forum_thread_params
     params.require(:forum_thread).permit(:subject, forum_posts_attributes: [:body])
   end
+
+  # def edit
+  #   @forum_threads = ForumThread.find(params[:id])
+  # end
+  #
+  # def update
+  #   params[:forum_thread]
+  #   forum_post = ForumThread.find(params[:id])
+  #   if forum_post.update_attributes(params.require(:forum_thread).permit(:subject))
+  #     redirect_to forum_threads_path
+  #   else
+  #     render :edit
+  #   end
+  # end
+  #
+  # def destroy
+  #   @forum_thread = ForumThread.find(params[:id])
+  #   @forum_thread.destroy
+  #   redirect_to forum_threads_path
+  # en
+
+
 end

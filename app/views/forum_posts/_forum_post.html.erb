@@ -1,7 +1,12 @@
 <%= div_for forum_post do %>
     <p class="text-muted">Posted by <%= forum_post.user.name %> <%= local_time_ago forum_post.created_at %></p>
     <p><%= forum_post.body %></p>
+
+
     <% if forum_post.user == current_user %>
-    <p>This is my Dog</p>
+        <%= link_to "Edit", edit_forum_post_path%>
+        <%= link_to "Delete this post!", destroy_path(id: forum_post.id), method: :delete %>
+
+        </div>
     <% end %>
 <% end %>
