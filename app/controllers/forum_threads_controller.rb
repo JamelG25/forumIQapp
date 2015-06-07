@@ -6,6 +6,8 @@ class ForumThreadsController < ApplicationController
     #ForumThread.all change to @.result
   end
 
+
+
   def show
     @forum_thread = ForumThread.find(params[:id]) || ForumThread.new
     @forum_post = ForumPost.new
@@ -28,13 +30,13 @@ class ForumThreadsController < ApplicationController
   end
 
   def edit
-    @forum_threads = ForumThread.find(params[:id])
+    @forum_thread = ForumThread.find(params[:id])
   end
 
   def update
-    params[:forum_thread]
-    forum_post = ForumThread.find(params[:id])
-    if forum_post.update_attributes(params.require(:forum_thread).permit(:subject))
+    params[:id]
+    forum_thread = ForumThread.find(params[:id])
+    if forum_thread.update_attributes(params.require(:forum_thread).permit(:subject))
       redirect_to forum_threads_path
     else
       render :edit
@@ -58,25 +60,7 @@ class ForumThreadsController < ApplicationController
     params.require(:forum_thread).permit(:subject, forum_posts_attributes: [:body])
   end
 
-  # def edit
-  #   @forum_threads = ForumThread.find(params[:id])
-  # end
-  #
-  # def update
-  #   params[:forum_thread]
-  #   forum_post = ForumThread.find(params[:id])
-  #   if forum_post.update_attributes(params.require(:forum_thread).permit(:subject))
-  #     redirect_to forum_threads_path
-  #   else
-  #     render :edit
-  #   end
-  # end
-  #
-  # def destroy
-  #   @forum_thread = ForumThread.find(params[:id])
-  #   @forum_thread.destroy
-  #   redirect_to forum_threads_path
-  # en
+
 
 
 end

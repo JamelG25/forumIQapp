@@ -8,8 +8,6 @@ class ForumThreads::ForumPostsController < ApplicationController
 
   def create
 
-    # @forum_post = @forum_thread.forum_posts.new forum_post_params
-
     @forum_thread = ForumThread.find(params[:forum_thread_id])
     @forum_post = ForumPost.new forum_post_params
     @forum_post.user = current_user
@@ -17,7 +15,6 @@ class ForumThreads::ForumPostsController < ApplicationController
 
 
     if @forum_thread.save
-      # @forum_post.send_notifications!
       redirect_to forum_thread_path(@forum_thread, anchor: "forum_post_#{@forum_post.id}"), notice: "Successfully posted!"
     else
       redirect_to forum_threads_path, alert: "Unable to save your post"
@@ -25,14 +22,13 @@ class ForumThreads::ForumPostsController < ApplicationController
   end
 
   def edit
-    @forum_post = ForumPost.find(params[:id])
+    @forum_post = ForumPost.find(params[:post_id])
   end
 
   def update
-    params[:id]
-    forum_post = ForumPost.find(params[:id])
+    forum_post = ForumPost.find(params[:post_id])
     if forum_post.update_attributes(params.require(:forum_post).permit(:body))
-      redirect_to forum_threads_path
+      redirect_to forum_thread_path
     else
       render :edit
     end

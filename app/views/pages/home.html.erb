@@ -12,6 +12,7 @@
         <div class="col-sm-4">
           <div style="background:red">Guess</div>
           <% if current_user %>
+              <p>Welcome</p>
               <%= link_to "LOG OUT",destroy_session_path, class:"btn btn-default" %>
           <%else%>
               <p>While I doubt you’ll get much sympathy from McJester, who has likely seen every bad beat possible, it did get me
@@ -24,17 +25,47 @@
           <% end%>
 
 
-          <div style="background:red">know</div>
-          <p>While I doubt you’ll get much sympathy from McJester, who has likely seen every bad beat possible, it did get me
-            thinking. What are the worst ways to get bad beat in DFS? In a Letterman-homage, here’s what I came up with.</p>
-          <%= link_to "LOG IN",'#', class:"btn btn-default" %>
-          <%= link_to "CREATE AN ACCOUNT", '#', class:"btn btn-default" %>
 
-          <div style="background:red">know</div>
-          <p>While I doubt you’ll get much sympathy from McJester, who has likely seen every bad beat possible, it did get me
-            thinking. What are the worst ways to get bad beat in DFS? In a Letterman-homage, here’s what I came up with.</p>
-          <%= link_to "LOG IN",'#', class:"btn btn-default" %>
-          <%= link_to "CREATE AN ACCOUNT", '#', class:"btn btn-default" %>
+          <div style="background:red">About Us</div>
+          <div class="about_us">
+            <p>Hey everyone, welcome to Daily Fantasy IQ
+              This is a place where we are extremely passionate about fantasy. DFS for us is not a job, but a way of life. Art is Life!
+
+              This site is design to help you easily discover way's to improve your game.
+
+              What you will find on Daily Fatansy IQ:
+              -Great Mentors who are the best
+              -quality articles related to fantasy and industry
+              -Your 24/7 community supprt
+
+              we have a huge following and we support everyone of our players!</p>
+
+          </div>
+
+          <div class="sponsors">
+          <div style="background:grey">Sponsors</div>
+
+         <p class="draftkings"><%= image_tag ("DraftKings.jpg")  %></p>
+          <p class="fanduel"><%= image_tag ("Fanduel.jpg")  %></p>
+
+        </div>
+
+
+          <div style="background:red">About Us</div>
+          <div class="about_us">
+            <p>Hey everyone, welcome to Daily Fantasy IQ
+              This is a place where we are extremely passionate about fantasy. DFS for us is not a job, but a way of life. Art is Life!
+
+              This site is design to help you easily discover way's to improve your game.
+
+              What you will find on Daily Fatansy IQ:
+              -Great Mentors who are the best
+              -quality articles related to fantasy and industry
+              -Your 24/7 community supprt
+
+              we have a huge following and we support everyone of our players!</p>
+
+          </div>
 
           <div style="background:red">know</div>
           <p>While I doubt you’ll get much sympathy from McJester, who has likely seen every bad beat possible, it did get me

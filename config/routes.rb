@@ -6,18 +6,19 @@ Rails.application.routes.draw do
   #
   # get 'forum_threads/new' => "forum#new",as: :new_forum_thread
 
-
-  get 'forum_threads/:id', to: 'forum_threads#show',as: :forum_thread
+  get 'forum_threads/new' => 'forum_threads#new', as: :new_forum_thread
+  get 'forum_threads/:id' => 'forum_threads#show',as: :forum_thread
   get 'forum_threads' => "forum_threads#index",as: :forum_threads
-  post'/forum_posts', to: 'forumthreads#create', as: :create_forum_post
+  post'/forum_posts' => 'forum_threads#create', as: :create_forum_post
+  patch "/forum_threads/:id/edit" => "forum_threads#update",as: :update_forum_threads
+  put "/forum_threads/:id/edit" => "forum_threads#update",as: :update_forum_thread
 
 
 
-
-
-  get "forum_posts/:id/edit" => "forum_threads#edit",as: :edit_forum_post
+  get "forum_posts/:id/edit" => "forum_threads/forum_posts#edit",as: :edit_forum_post
+  # get "forum_posts/:id/edit" => "forum_threads/forum_posts#edit",as: :edit_forum_posts
   patch "forum_posts/:id/edit" => "forum_threads/forum_posts#update",as: :update_forum_posts
-  put "forum_posts/:id/edit" => "forum_threads/forum_posts#update",as: :update_forum_post
+  # put "forum_posts/:id/edit" => "forum_threads/forum_posts#update",as: :update_forum_post
   delete 'forum_posts/:id' =>'forum_threads/forum_posts#destroy',as: :destroy
 
 
