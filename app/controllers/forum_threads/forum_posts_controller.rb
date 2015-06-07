@@ -2,9 +2,7 @@ class ForumThreads::ForumPostsController < ApplicationController
   # before_action :authenticate_user!
   # before_action :set_forum_thread
 
-# def new
-#   @forum_post = ForumPost.new
-# end
+
 
   def create
 
@@ -51,24 +49,5 @@ class ForumThreads::ForumPostsController < ApplicationController
     params.require(:forum_post).permit(:body,:forum_thread_id)
   end
 
-  # def edit
-  #   @forum_post = ForumPost.find(params[:id])
-  # end
-  #
-  # def update
-  #   params[:forum_post]
-  #   forum_post = ForumPost.find(params[:id])
-  #   if forum_post.update_attributes(params.require(:forum_post).permit(:body))
-  #     redirect_to forum_threads_path
-  #   else
-  #     render :edit
-  #   end
-  # end
-  #
-  # def destroy
-  #   @forum_post = ForumPost.find(params[:forum_thread_id])
-  #   @forum_post.destroy
-  #   redirect_to forum_threads_path
-  # end
 
 end

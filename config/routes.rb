@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
-  # get 'pages/home'
 
-  # get 'forum_posts/forum'
-  #
-  # get 'forum_threads/new' => "forum#new",as: :new_forum_thread
 
   get 'forum_threads/new' => 'forum_threads#new', as: :new_forum_thread
   get 'forum_threads/:id' => 'forum_threads#show',as: :forum_thread

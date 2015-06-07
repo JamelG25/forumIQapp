@@ -1,18 +1,114 @@
 @import "bootstrap";
 
 
+//navbar
+$navbar-color:#8f0a0b;
 
+
+//sidebar colors and center-bar
+$primary: #303030 ;
+$metal-color: $primary;
+
+
+
+//navbar
+.navbar{
+  margin-bottom: 0;
+  background-color: $navbar-color;
+  color: white;
+}
+
+.comingsoon{
+  padding-top: 20px;
+}
+//control the word inside each bar
+.titulo{
+  padding-bottom: 15px;
+}
+
+.metal{
+  //background-image: url("../images/metal2.png");
+  background-color: $metal-color;
+  padding-top: 20px;
+  box-shadow: 5px 1px 5px 1px #2E2F30;
+  color:#F8F8F8;
+  text-align: center;
+  font-family: 'BebasNeueRegular';
+  font-size: 22px;
+  text-shadow: 1px 1px 1px #FFF;
+  line-height: 24px;
+}
+
+
+.claro{
+  background-color: $metal-color;
+  padding-top: 20px;
+  color: #F8F8F8 ;
+  box-shadow: 5px 1px 5px 1px #2E2F30;
+  text-align: center;
+  font-family: 'BebasNeueRegular';
+  font-size: 22px;
+  text-shadow: 1px 1px 1px #FFF;
+  line-height: 24px;
+}
+
+.top-side{
+  background-color: $metal-color;
+  padding-top: 15px;
+  box-shadow: 5px 1px 5px 1px #2E2F30;
+  color: #F8F8F8 ;
+  text-align: center;
+  font-family: 'BebasNeueRegular';
+  font-size: 22px;
+  text-shadow: 1px 1px 1px #FFF;
+  line-height: 24px;
+}
+
+.patrocinador{
+  background-color: $metal-color;
+  padding-top: 15px;
+  color: #F8F8F8 ;
+  box-shadow: 5px 1px 5px 1px #2E2F30;
+  text-align: center;
+  font-family: 'BebasNeueRegular';
+  font-size: 22px;
+  text-shadow: 1px 1px 1px #FFF;
+  line-height: 24px;
+}
+
+
+.fantasy{
+  padding: 15px;
+  text-align: center;
+}
+
+.spacio{
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.spons{
+  padding: 15px;
+  text-align: center;
+}
 
 .centro{
  text-align: center;
 }
+
+
+.about_us{
+  padding: 15px;
+
+}
+
 
 .back-splash{
     background-color: #191919;
 }
 
 .atras{
-    background-color: #DADADA;
+    background-color: #a7a7a7;
 }
 
 .azul{
@@ -20,17 +116,8 @@
     box-shadow: 0 0 5px 0 #2E2F30;
     overflow: hidden;
     height: 100%;
+    padding-top: 15px;
 }
-
-
-.navbar{
-    margin-bottom: 0;
-  background-color: #8f0a0b;
-  color: white;
-
-}
-
-
 
 
 

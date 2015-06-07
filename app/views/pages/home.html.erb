@@ -6,94 +6,51 @@
       <div class="azul">
 
         <div class="col-sm-8">
-          <div style="background:limegreen">vegas</div>
+          <div class="metal"><div class="titulo">IQ New</div></div>
+
+          <p class="comingsoon"><%= image_tag ("comingsoon.png")  %></p>
+
         </div>
 
         <div class="col-sm-4">
-          <div style="background:red">Guess</div>
+          <div class="claro"><div class="titulo">Guess</div></div>
           <% if current_user %>
-              <p>Welcome</p>
+             <div class="fantasy"><p>Get Your Game Up Brodie!!</p></div>
               <%= link_to "LOG OUT",destroy_session_path, class:"btn btn-default" %>
           <%else%>
-              <p>While I doubt you’ll get much sympathy from McJester, who has likely seen every bad beat possible, it did get me
-                thinking. What are the worst ways to get bad beat in DFS? In a Letterman-homage, here’s what I came up with.</p>
+              <div class="spacio">
+                <div class="fantasy"><p>Welcome to Daily Fantasy IQ! We are a community featuring discussions on all kinds of DFS topics. Our classing system allows you to earn rank based on your activity, earned reputation, and friend referrals.
+                    Each Week we give out shout-out to our top performers and at the end of the month we give out T-Shirt to the top tournament players. So what are you waiting for? Registration is simple, fast, and takes less than a minute.</p> </div>
               <%= link_to "LOG IN",new_session_path, class:"btn btn-default" %>
-
           <% end%>
           <% unless current_user %>
-              <%= link_to "CREATE AN ACCOUNT", new_user_path, class:"btn btn-default" %>
+            <%= link_to "CREATE AN ACCOUNT", new_user_path, class:"btn btn-default" %>
+              </div>
           <% end%>
 
 
 
-          <div style="background:red">About Us</div>
-          <div class="about_us">
-            <p>Hey everyone, welcome to Daily Fantasy IQ
+           <div class="top-side"><div class="titulo">About Us</div></div>
+           <div class="about_us">
+             <p>Hey everyone, Daily Fantasy IQ
               This is a place where we are extremely passionate about fantasy. DFS for us is not a job, but a way of life. Art is Life!
-
               This site is design to help you easily discover way's to improve your game.
-
               What you will find on Daily Fatansy IQ:
               -Great Mentors who are the best
               -quality articles related to fantasy and industry
               -Your 24/7 community supprt
-
               we have a huge following and we support everyone of our players!</p>
+            </div>
 
-          </div>
+            <div class="sponsors">
+              <div class="patrocinador"><div class="titulo">Sponsors</div></div>
 
-          <div class="sponsors">
-          <div style="background:grey">Sponsors</div>
+                <div class="spons"><p class="draftkings"><%= image_tag ("DraftKings.jpg")  %></p></div>
+                <div class="spons"><p class="fanduel"><%= image_tag ("fanduel.png")  %></p></div>
 
-         <p class="draftkings"><%= image_tag ("DraftKings.jpg")  %></p>
-          <p class="fanduel"><%= image_tag ("Fanduel.jpg")  %></p>
-
-        </div>
-
-
-          <div style="background:red">About Us</div>
-          <div class="about_us">
-            <p>Hey everyone, welcome to Daily Fantasy IQ
-              This is a place where we are extremely passionate about fantasy. DFS for us is not a job, but a way of life. Art is Life!
-
-              This site is design to help you easily discover way's to improve your game.
-
-              What you will find on Daily Fatansy IQ:
-              -Great Mentors who are the best
-              -quality articles related to fantasy and industry
-              -Your 24/7 community supprt
-
-              we have a huge following and we support everyone of our players!</p>
-
-          </div>
-
-          <div style="background:red">know</div>
-          <p>While I doubt you’ll get much sympathy from McJester, who has likely seen every bad beat possible, it did get me
-            thinking. What are the worst ways to get bad beat in DFS? In a Letterman-homage, here’s what I came up with.</p>
-          <%= link_to "LOG IN",'#', class:"btn btn-default" %>
-          <%= link_to "CREATE AN ACCOUNT", '#', class:"btn btn-default" %>
-
-          <div style="background:red">know</div>
-          <p>While I doubt you’ll get much sympathy from McJester, who has likely seen every bad beat possible, it did get me
-            thinking. What are the worst ways to get bad beat in DFS? In a Letterman-homage, here’s what I came up with.</p>
-          <%= link_to "LOG IN",'#', class:"btn btn-default" %>
-          <%= link_to "CREATE AN ACCOUNT", '#', class:"btn btn-default" %>
-
-          <div style="background:red">know</div>
-          <p>While I doubt you’ll get much sympathy from McJester, who has likely seen every bad beat possible, it did get me
-            thinking. What are the worst ways to get bad beat in DFS? In a Letterman-homage, here’s what I came up with.</p>
-          <%= link_to "LOG IN",'#', class:"btn btn-default" %>
-          <%= link_to "CREATE AN ACCOUNT", '#', class:"btn btn-default" %>
-
-          <div style="background:red">know</div>
-          <p>While I doubt you’ll get much sympathy from McJester, who has likely seen every bad beat possible, it did get me
-            thinking. What are the worst ways to get bad beat in DFS? In a Letterman-homage, here’s what I came up with.</p>
-          <%= link_to "LOG IN",'#', class:"btn btn-default" %>
-          <%= link_to "CREATE AN ACCOUNT", '#', class:"btn btn-default" %>
-        </div>
-
+            </div>
+        </div> <!-- /container -->
       </div>
     </div>
-
-  </div> <!-- /container -->
+  </div>
 </div>
