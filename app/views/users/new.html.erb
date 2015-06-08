@@ -1,19 +1,39 @@
-<%= form_for @user, url:create_user_path do |f| %>
 
-    <%# f.label :name%>
-    <%# f.name_field :namel%>
 
-    <%= f.label :email%>
-    <%= f.email_field :email%>
 
-    <%= f.label :password %>
-    <%= f.password_field :password%>
 
-    <%= f.label :password_confirmation, "Confirm" %>
-    <%= f.password_field :password_confirmation %>
 
-    <%= f.submit "Register" %>
+<h1 class="jumbotron">Create an Account</h1>
 
-<% end%>
+
+
+<% if flash["alert-warning"]%>
+    <div class ="alert alert-danger"><%=flash["alert-warning"]%></div>
+<% end %>
+
+<%= form_for @user, url: create_user_path do |f| %>
+
+
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+
+      <div class="form-group">
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "form-control" %>
+      </div>
+
+      <br>
+
+      <div class="form-group">
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, class: "form-control" %>
+      </div>
+
+
+    <%= f.submit "Register", class: "btn btn-primary" %>
+
+<% end %>
 
 <%= link_to "Home", users_path %>

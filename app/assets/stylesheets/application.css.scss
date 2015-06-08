@@ -49,6 +49,15 @@ $metal-color: $primary;
   line-height: 24px;
 }
 
+.form-group{
+  width: 300px;
+  padding: 20px;
+  background-color: lightgray;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+
 
 .claro{
   background-color: $metal-color;

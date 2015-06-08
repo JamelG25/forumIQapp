@@ -1,16 +1,22 @@
+
+
+<h1 class="jumbotron">Please Log In</h1>
+
+
 <%= form_for @user,url: create_session_path do |f| %>
 
+    <div class="form-group" id="morado">
+      <%= f.label :email %>
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
 
+    <div class="form-group" id="amarillo">
+      <%= f.label :password %>
+      <%= f.text_field :password, class: "form-control" %>
+    </div>
 
-    <% flash.each do |key,value|%>
-        <div class="<%= key %>"> <%= value %>  </div>
-    <% end %>
+    <div class="form-group" id="mora">
+      <%= f.submit "Log In", class: "btn btn-primary" %>
+    </div>
 
-    <%= f.label :email%>
-    <%= f.email_field :email%>
-
-    <%= f.label :password %>
-    <%= f.password_field :password%>
-
-    <%= f.submit "Log in" %>
-<% end%>
+<% end %>
