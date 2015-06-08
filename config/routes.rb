@@ -12,9 +12,7 @@ Rails.application.routes.draw do
 
 
   get "forum_posts/:id/edit" => "forum_threads/forum_posts#edit",as: :edit_forum_post
-  # get "forum_posts/:id/edit" => "forum_threads/forum_posts#edit",as: :edit_forum_posts
   patch "forum_posts/:id/edit" => "forum_threads/forum_posts#update",as: :update_forum_posts
-  # put "forum_posts/:id/edit" => "forum_threads/forum_posts#update",as: :update_forum_post
   delete 'forum_posts/:id' =>'forum_threads/forum_posts#destroy',as: :destroy
 
 

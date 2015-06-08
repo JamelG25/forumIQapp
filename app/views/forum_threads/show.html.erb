@@ -1,6 +1,6 @@
 <div class="container">
   <h1><%= @forum_thread.subject %></h1>
-  <p class="text-muted">Created by <%= @forum_thread.user.name %></p>
+  <p class="text-muted">Created by <%= @forum_thread.user.email %></p>
 
   <% @forum_thread.forum_posts.order(created_at: :asc).each do |post| %>
     <%= render partial: "forum_threads/forum_posts/forum_post", locals: {post: post} %>
