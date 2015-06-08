@@ -26,6 +26,16 @@ $metal-color: $primary;
   padding-bottom: 15px;
 }
 
+//background of the content
+.pare{
+  background-color: white;
+  box-shadow: 0 0 5px 0 #2E2F30;
+  overflow: hidden;
+  height: 100%;
+  padding-top: 15px;
+}
+
+
 .metal{
   //background-image: url("../images/metal2.png");
   background-color: $metal-color;
@@ -111,15 +121,11 @@ $metal-color: $primary;
     background-color: #a7a7a7;
 }
 
-.azul{
-    background-color: white;
-    box-shadow: 0 0 5px 0 #2E2F30;
-    overflow: hidden;
-    height: 100%;
-    padding-top: 15px;
+.why-us{
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 18px;
+  line-height: 1.625;
 }
-
-
 
 .forum_post {
   border-top: 1px solid #ccc;
@@ -129,6 +135,14 @@ $metal-color: $primary;
     background-color: rgb(248, 238, 199);
     padding: 8px;
   }
+}
+
+.contact{
+  text-align: center;
+}
+
+.panel{
+
 }
 
 

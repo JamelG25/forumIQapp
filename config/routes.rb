@@ -36,8 +36,8 @@ Rails.application.routes.draw do
 
     get "/about" => "about#index",as: :about
     get '/profile' => "profiles#forum",as: :profile
-    get '/contact' => "contacts#forum",as: :contact
-    get '/review' => "reviews#forum",as: :review
+     get '/contact' => "contacts#index",as: :contact
+
 
 
     get 'users/index' =>'users#index',as: :users
