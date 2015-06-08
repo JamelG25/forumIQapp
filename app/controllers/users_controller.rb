@@ -9,7 +9,8 @@ class UsersController < ApplicationController
 
   def create
 
-    if User.create user_params
+    @user = User.create user_params
+    if @user.save
 
       # flash =hash with a key name success this gets sent to our view = displayed like this  Success => "Message".the the way to show the user a message
       flash[:success] = 'you have been registered'
