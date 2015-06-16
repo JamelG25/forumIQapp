@@ -17,7 +17,7 @@ class UsersController < ApplicationController
       redirect_to users_path
     else
       flash[:error] = 'unable to sign you in'
-      render :new
+      redirect_to new_user_path
     end
 
   end

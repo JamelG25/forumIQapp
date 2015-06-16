@@ -1,0 +1,172 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/models/user.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        10,
+        10,
+        10,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/helpers/about_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/helpers/contacts_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/helpers/forum_posts_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/helpers/forum_threads_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/helpers/pages_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/helpers/profiles_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/helpers/sessions_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/helpers/users_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/controllers/sessions_controller.rb": [
+        1,
+        1,
+        2,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        1,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/JamelGuerrero/Desktop/forumIQap/app/controllers/users_controller.rb": [
+        1,
+        1,
+        null,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null,
+        1,
+        null,
+        2,
+        2,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1434413650
+  }
+}
