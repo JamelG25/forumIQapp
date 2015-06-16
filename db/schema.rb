@@ -24,17 +24,12 @@ ActiveRecord::Schema.define(version: 20150605223340) do
     t.datetime "updated_at",      null: false
   end
 
-  add_index "forum_posts", ["forum_thread_id"], name: "index_forum_posts_on_forum_thread_id", using: :btree
-  add_index "forum_posts", ["user_id"], name: "index_forum_posts_on_user_id", using: :btree
-
   create_table "forum_threads", force: :cascade do |t|
     t.string   "subject"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
-
-  add_index "forum_threads", ["user_id"], name: "index_forum_threads_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email"

@@ -59,9 +59,7 @@ development:
 #  <<: *default
 #  database: forumIQapp_test
 
-  #test:
-  #  <<: *default
-  #  database: travis-test_test
+
 test:
   adapter: postgresql
   database: travis_ci_test

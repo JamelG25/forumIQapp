@@ -8,10 +8,6 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
-# Indexes
-#
-#  index_forum_threads_on_user_id  (user_id)
-#
 
 class ForumThread < ActiveRecord::Base
   belongs_to :user
