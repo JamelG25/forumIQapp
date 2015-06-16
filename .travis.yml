@@ -1,11 +1,18 @@
 language: ruby
 rvm:
-  - 2.0.0
+- 2.0.0
 branches:
   only:
-    - master
+  - master
 install:
-  - "travis_retry bundle install"
-
+- travis_retry bundle install
 before_script:
-  - psql -c 'create database "forumIQapp_test";' -U postgres
+- psql -c 'create database "forumIQapp_test";' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: UJUvLG9d/RXNgHZWUhqbTeIs/9n3qwG5tyWMRsfobeMvsxaUkmJXwsuQ288a8OKTAHSWQ3cKu9izSr75cU7bNaht1xyzz824UcCwY5Kn6hLtyeKLpxZZOAZvN5c/6ygeaCFmdrygwWZBf5K73p1L8QmBsbcmXztFIMFoX8/bUT1EUlq9AVU1JCkP8Ot+pLCVCdSClmK+Z0k4Pq70aujGwfuleRdacPRWEfZ8DUu7I+l8kWjz8iZsZ6sotbiMRaIJO5zJp4bSvv0Kgvj65Jvy3AJ0cy9W78Hi6tYDyhvHlLG/x/Bz42Eo50AvcvDWHQM59TawRWpDOmxn52Zzbwz7xFtQNCrQMaKh3e9zgaP12QigcGInPXQ3B6f/bOEG6ECfc3mQstMSQDpn+tl7bGuqbp8yawxcOrtvyKxvUHwHec1wWZuaVRMYjclpIe1Ps1ZA11GDS6gUx7lBG0MNpz5u1n/3KnIQVhlmVbRAZoJlDxqq/YW/18wATKz9wwbIclQZdSKhn4RMUmp8KpxCkbsk4jVVM8sp6gEctAMuwVVFmMIwbx4dEi8IIxdxTVFiU5vcFdcHoCjjHEVP1alvgIcNPlpGujAtwEicLlz2SU8TkZaRJmuy+9PdPjEssup12RoFQjsSDs5BBp0TfIfNxmjr0ug/mNt6EeVsYt8eKndo5tA=
+  app: forumiq
+  run:
+    - "rake db:migrate"
+    - restart
